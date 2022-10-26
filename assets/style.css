@@ -49,6 +49,7 @@ a:hover {
 }
 
 .name {
+    position: relative;
     margin: 5px 0px 10px 0px;
     padding: 5px 5px 0px 50px;
     font-size: 35px;
@@ -78,20 +79,22 @@ header {
 
 section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
 }
 
 .float-left {
-    flex-basis: 10rem;
-    flex-grow: 1;
-    border-right: 5px solid var(--text-color);
+    border-right: 2px solid var(--text-color);
+    flex: 0 0 200px;
+    margin: 10px 30px 15px;
+    border-right: 3px solid var(--martin);
+    padding: 0 10px;
+    text-align: right;
 }
 
 .float-right {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 80px 10px 30px;
 }
 
 
@@ -101,8 +104,9 @@ section {
     cursor: pointer;
 }
 
+
 img {
-    max-width: 15%;
+    width: 15%;
     height: auto;
     padding: 10px;
     margin: 10px;
@@ -111,11 +115,11 @@ img {
 }
 
 p {
-    display: block;
-    max-width: 50%;
-    margin: 5px;
-    padding: 5px;
-    font-size: 16px;
+    float: left;
+    /* text-align: justify; */
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 100px;
     color: var(--primary-color);
     text-shadow: 2px 2px 8px var(--text-color); 
 }
@@ -129,6 +133,7 @@ h2 {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-evenly;
     background-color: #1995AD;
@@ -141,3 +146,23 @@ footer li {
     text-shadow: 1px 0px 1px var(--background-color);
 }
 
+@media (max-width: 1000px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .float-left {
+        display: none;
+    }
+
+    p {
+        font-size: 70%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}

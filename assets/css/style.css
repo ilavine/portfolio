@@ -4,7 +4,7 @@
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
-
+/* Colors used on the webpage */
 :root {
     --background-color: #F1F1F2;
     --text-color: #BCBABE;
@@ -15,7 +15,7 @@
 body {
     background-color: var(--background-color);
 }
-
+/* Styles the navbar */
 .navbar {
     padding: 1rem 1rem 0;
     background-color: var(--primary-color);
@@ -24,8 +24,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-ul li {
+/* Displays the navbar items */
+nav ul li {
+    color: var(--background-color);
     display: inline-block;
     margin: 0px 10px;
     list-style: none;
@@ -39,17 +40,18 @@ li :hover {
     padding: 1em;
     cursor: pointer;
 }
-
-a {
-    color: var(--text-color);
-    transition: all 0.3s ease 0s;
+/*  Styles the anchor elements list */
+nav li a {
+    color: var(--background-color);
+    font-weight: bolder;
     text-decoration: none;
 }
-
+/* Changes the color of the links on hover and adds animation*/
 a:hover {
-    color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease 0s;
 }
-
+/* Styles the relative tag located at the left top */
 .name {
     position: relative;
     margin: 5px 0px 10px 0px;
@@ -61,12 +63,12 @@ a:hover {
     background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
 }
 
-
+/* Styles the hero/header */
 header {
     padding: 100px;
     background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--text-color), var(--background-color));
 }
-
+/* Styles the title located in the hero */
 .title {
     color: var(--primary-color);
     font-size: 25px;
@@ -78,11 +80,11 @@ header {
     right: 25px;
     padding: 5px;
 }
-
+/* Sets section display to flex */
 section {
     display: flex;
 }
-
+/* Moves items to the left side */
 .float-left {
     border-right: 5px solid var(--text-color);
     flex: 0 0 200px;
@@ -90,18 +92,18 @@ section {
     padding: 0 10px;
     text-align: right;
 }
-
+/* Hover effect for the items located on the left  */
 .float-left:hover {
     text-decoration: underline;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
 }
-
+/* Display settings for the about section */
 .about {
     display: flex;
     flex-wrap: wrap;
 }
-
+/* Styles the about section */
 .about-container {
     margin: 20px 80px 10px 30px;
     width: 70%;
@@ -110,114 +112,118 @@ section {
     color: var(--primary-color);
     text-shadow: 2px 2px 8px var(--text-color);
 }
-
+/* Positions the profile image */
 .floated {
     float: left;
-    min-width: 150px;
-    width: 15%;
+    min-width: 200px;
+    width: 20%;
     max-width: 300px;
     padding: 5px;
     margin-right: 40px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px var(--text-color);
 }
-
+/* Decorates h2 elements */
 h2 {
     font-size: 22px;
     color: var(--primary-color);
     text-shadow: 2px 2px 8px var(--secondary-color);
     text-transform: uppercase;
 }
-
+/* Displays projects cards */
 .project-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-
+/* Styles each card */
 .card {
-    padding: 10px;
+    padding: 5px;
     margin: 1%;
-    width: 48%;
-    height: fit-content;
+    width: 650px;
+    height: 440px;
     position: relative;
-    height: fit-content;
     background-color: #A1D6E2;
+    overflow: hidden;
 }
-
+/* Styles each card img */
 .card img {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     transition: 0.2s;
     box-shadow: 2px 1px 1px var(--text-color);
     opacity: 0.7;
 }
-
+/* Hover effect for card, removes opacity */
 .card img:hover {
     opacity: 1;
 }
-
+/* The first card appears larger than the rest */
 .card:first-child {
-    width: 100%;
+    width: 81%;
     height: fit-content;
 }
-
-.card-container h3 {
-    font-size: 36px;
-    text-transform: uppercase;
+/* Positions card descriptions */
+.card-container {
     position: absolute;
-    bottom: 5;
-    left: 0;
-    color: var(--background-color);
+    width: 70%;
+    height: fit-content;
     background-color: var(--primary-color);
+    bottom: 25px;
+    padding: 5px;
 }
-
+/* Styles h3 element inside the card description container */
+.card-container h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--background-color);
+}
+/* Styles h4 element inside the card description container  */
 .card-container h4 {
     text-align: justify;
-    margin-top: 40px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 14px;
     font-weight: bold;
     text-shadow: 2px 1px 1px var(--background-color);
 }
-
-.card:first-child h4 {
-    width: 80%;
-    font-size: 18px;
-}
-
-.card:first-child h3 {
-    flex: 100%;
-    font-size: 42px;
-}
-
+/* Styling for buttons */
 button {
-    margin-top: 75px;
+    margin-top: 15px;
     border: none;
-    color: var(--background-color);
-    padding: 15px 32px;
+    color: var(--primary-color  );
+    padding: 5px 5px;
+    margin-left: 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
-
-
-footer {
+/* Add effect when buttons are in focus */
+button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 2px var(--text-color);
+    transition: 0.2s;
+}
+/* Positions contact list */
+.contact-list { 
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     justify-content: space-evenly;
-    background-color: #1995AD;
-    padding: 20px;
-}
-
-footer li {
     list-style: none;
-    font-size: 22px;
+    width: 100%;
+    font-size: 26px;
     text-shadow: 1px 0px 1px var(--background-color);
 }
-
+/* Styles contact list anchor */
+.contact-list a {
+    color: var(--primary-color);
+    font-weight: bolder;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+/* Responsivness */
 @media (max-width: 1024px) {
 
     .container {

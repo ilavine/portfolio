@@ -135,11 +135,6 @@ h2 {
     justify-content: space-between;
 }
 
-.card {
-    position: relative;
-    background-color: red;
-}
-
 
 .card:first-child {
     width:90%;
@@ -150,14 +145,11 @@ h2 {
     transform: scale(0.99);
 }
 
-.card-container h3 {
+.card-container {
     position: absolute;
     color: var(--text-color);
-    bottom: 25px;
     background-color: var(--primary-color);
-    padding: 10px;
 }
-
 
 footer {
     display: flex;
